@@ -1,10 +1,9 @@
 import Card from 'react-bootstrap/Card';
 import Tags from './Tags';
-import Boton from './Boton';
 
 
 
-const MyCard = ({ imagen, nombre, descripcion, colorButton, textButton, colorSexo, sexo }) => {
+const MyCard = ({ imagen, nombre, descripcion, colorSexo, sexo, colorCastrado, castrado }) => {
   return (
     <>
         <Card style={{ width: "18rem" }}>
@@ -12,9 +11,8 @@ const MyCard = ({ imagen, nombre, descripcion, colorButton, textButton, colorSex
             <Card.Body>
                 <Card.Title>{nombre}</Card.Title>
                 <Card.Text>{descripcion}</Card.Text>
-                <Boton colorButton={colorButton} textButton={textButton} />
             </Card.Body>
-            <Tags colorSexo={colorSexo} sexo={sexo} />
+            <Tags colorSexo={colorSexo} sexo={sexo} colorCastrado={colorCastrado} castrado={castrado} />
         </Card>
     </>
 
